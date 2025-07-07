@@ -12,3 +12,4 @@ sentence-transformers
 transformers
 requests
 crawl4ai
+uvicorn
