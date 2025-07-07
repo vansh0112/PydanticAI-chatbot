@@ -1,0 +1,14 @@
+# === Global Python ===
+__pycache__/
+*.pyc
+
+# === Env variables ===
+.env
+
+# === Frontend ===
+frontend/node_modules/
+
+# === Backend-specific ignores ===
+backend/chunk.json
+backend/pinecone_utils_old/
+backend/setup_pinecone/
