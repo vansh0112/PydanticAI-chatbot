@@ -13,3 +13,4 @@ transformers
 requests
 crawl4ai
 uvicorn
+itsdangerous
