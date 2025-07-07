@@ -9,6 +9,6 @@ __pycache__/
 frontend/node_modules/
 
 # === Backend-specific ignores ===
-backend/chunk.json
-backend/pinecone_utils_old/
-backend/setup_pinecone/
+backend/chunks.json
+backend/pinecone_utils_old.py
+backend/setup_pinecone.py
