@@ -24,6 +24,10 @@ GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 SECRET_KEY = os.getenv("SECRET_KEY", "supersecret")
 
+PORT = int(os.environ.get("PORT", 10000))
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info(f"✅ Starting FastAPI app on port {PORT}")
 # === FastAPI app ===
 app = FastAPI()
 app.add_middleware(
@@ -171,3 +175,8 @@ async def get_user_info(request: Request):
     if not user:
         raise HTTPException(status_code=401, detail="Not authenticated")
     return user
+
+@app.get("/")
+def health_check():
+    return {"status": "✅ FastAPI is running!"}
+
